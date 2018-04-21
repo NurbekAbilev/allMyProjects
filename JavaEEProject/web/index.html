@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Some Text</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--
+            <form action="FileUploadServlet" method="post" enctype="multipart/form-data">
+                Select File to Upload:<input type="file" name="fileName">
+            </form>
+        -->
+        <p>Login:</p>
+        <form action="LoginServlet" method="post">
+            <p>Login:<input type="text" name="username" value = "sample"></p>
+            <p>Password:<input type="text" name="password" value="sample"></p>
+            <input type="submit" value="Log in">
+        </form>
+        
+        <p>Register:</p>
+         <form action="RegServlet" method="post">
+            <p>Login:<input type="text" name="username"></p>
+            <p>Password:<input type="text" name="password"></p>
+            <input type="submit" value="Sign up">
+        </form>
+        
+    <br>
+   
+
+    </body>
+</html>
