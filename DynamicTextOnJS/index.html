@@ -1,0 +1,50 @@
+<body>
+    <p id="text">Initial text</p>
+</body>
+<script>
+ 
+var output = document.getElementById("text");
+ 
+function setText(text){
+    output.innerHTML = text;
+}
+ 
+var textArr = [
+    "This is first text",
+    "This is second text",
+    "This is third text"
+];
+ 
+var text = textArr[0];
+var cnt = 0;
+var c = 0;
+var tuda = true;
+ 
+ 
+setInterval(function(){
+    console.log(text.substr(0,cnt));
+    setText(text.substr(0,cnt)+"|");
+   
+    if(tuda){
+        cnt++;
+    }
+    else{
+        cnt--;
+    }
+   
+    if(cnt==text.length){
+        tuda = false;
+    }
+   
+    if(cnt==0 && !tuda){
+        tuda = true;
+        var len = textArr.length;
+        c = (c+1)%len;
+       
+        text = textArr[c];
+    }
+   
+},100);
+ 
+ 
+</script>
